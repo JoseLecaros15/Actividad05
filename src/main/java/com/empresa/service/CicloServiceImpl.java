@@ -5,18 +5,18 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.empresa.entity.Usuario;
+import com.empresa.entity.Ciclo;
+import com.empresa.repository.CicloRepository;
 
-import com.empresa.repository.UsuarioRepository;
+
 @Service
-public class UsuarioServiceImpl implements UsuarioService {
+public class CicloServiceImpl implements CicloService{
 
 	@Autowired
-	private UsuarioRepository repositorio;
-	
-	@Override
-	public List<Usuario> listaUsuario() {
-		return repositorio.findAll();
-	}
+	private CicloRepository repositorio;
 
+	@Override
+	public List<Ciclo> listaCiclo() {
+		return repositorio.findAll();
+	} 
 }

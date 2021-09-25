@@ -18,8 +18,11 @@ public class Disponibilidad {
 	private String horaInicio;
 	private String horaFin;
 	private String dia;
-	private int idCiclo;
-		
+	
+	@ManyToOne
+	@JoinColumn(name = "idCiclo")
+	private Ciclo ciclo;
+			
 	@ManyToOne
 	@JoinColumn(name = "idUsuario")
 	private Usuario usuario;
@@ -56,20 +59,20 @@ public class Disponibilidad {
 		this.dia = dia;
 	}
 
-	public int getIdCiclo() {
-		return idCiclo;
-	}
-
-	public void setIdCiclo(int idCiclo) {
-		this.idCiclo = idCiclo;
-	}
-
 	public Usuario getUsuario() {
 		return usuario;
 	}
 
 	public void setUsuario(Usuario usuario) {
 		this.usuario = usuario;
+	}
+
+	public Ciclo getCiclo() {
+		return ciclo;
+	}
+
+	public void setCiclo(Ciclo ciclo) {
+		this.ciclo = ciclo;
 	}
 	
 	

@@ -25,7 +25,6 @@ public class DisponibilidadController {
 	
 	@Autowired
 	private DisponibilidadService disponibilidadService;
-	
 	@GetMapping
 	@ResponseBody
 	public ResponseEntity<List<Disponibilidad>> listaDisponibilidad(){
